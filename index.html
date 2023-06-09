@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://media.wired.com/photos/62feb60bcea7c0581e825cb0/16:9/w_2400,h_1350,c_limit/Fate-of-Game-Preservation-Games-GettyImages-1170073827.jpg">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Mines-Vs-Treasure</title>
+</head>
+
+<body>
+    <audio src="./assets/media/game.mp3" autoplay loop hidden></audio>
+    <div class="main fst-italic">
+        <h1 class="fw-bolder">Mines-Vs-Treasure</h1>
+        <div class="myForm">
+            <h2>Enter Your Name</h2>
+            <div class="input-text">
+                <input type="text" placeholder="Your Name" id="myName">
+                <p id="myErrorName"></p>
+                <select class="form-select-lg border-0 text-center" id="myLevel" aria-label=".form-select-lg example">
+                    <option selected disabled value="select">Select the level</option>
+                    <option value="easy">Easy</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <p id="myErrorLevel" class="mb-3"></p>
+            </div>
+
+            <div class="input-submit">
+                <button onclick="start()">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
