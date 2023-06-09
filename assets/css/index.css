@@ -63,8 +63,8 @@ body {
 }
 
 .card-result {
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     width: 90px;
     height: 100px;
     color: aliceblue;
