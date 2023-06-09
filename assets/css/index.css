@@ -63,8 +63,8 @@ body {
 }
 
 .card-result {
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     width: 90px;
     height: 100px;
     color: aliceblue;
@@ -92,6 +92,9 @@ body {
     margin-top: 10px;
     height: 80px;
     cursor: auto;
+}
+#score{
+    opacity: 0;
 }
 
 /* end game.html style */

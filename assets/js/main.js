@@ -27,7 +27,7 @@ if (window.location.pathname == "/game.html") {
   let getNameScore = JSON.parse(localStorage.getItem("result"));
   myName.innerText = getNameScore["myName"];
   let myScore = document.getElementById("myScore");
-  myScore.innerText = 0;
+  myScore.innerText = 100;
 
   let myImg = document.querySelectorAll(".myImg");
   let arrRes = [
@@ -129,6 +129,8 @@ if (window.location.pathname == "/game.html") {
               }
             }
           } else {
+            document.getElementById("score").style.opacity = 1;
+            myScore.innerText = eval(100 - myScore.innerText);
             e.style.display = "none";
             e.nextElementSibling.style.display = "flex";
             document.getElementById("resStatus").innerText =
@@ -146,6 +148,10 @@ if (window.location.pathname == "/game.html") {
             window.scrollTo(0, 0);
           }
         } else {
+          document.getElementById("score").style.opacity = 1;
+          myImg.forEach((i) => {
+            i.style.pointerEvents = "none";
+          });
           e.style.display = "none";
           e.nextElementSibling.style.display = "flex";
           document.getElementById("myAudio").innerHTML =
@@ -159,6 +165,7 @@ if (window.location.pathname == "/game.html") {
           window.scrollTo(0, 0);
         }
       } else {
+        document.getElementById("score").style.opacity = 1;
         alert("Game Over");
         myScore.innerText = 0;
         myImg.forEach((i) => {
